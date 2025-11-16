@@ -1,0 +1,55 @@
+.main-page {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 200px 400px;
+  margin-top: 80px;
+}
+
+.ad-list {
+  grid-column: 2;
+}
+
+.sorting-container {
+  display:  flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+}
+.sorting-container * {
+  margin-right: 10px;
+}
+.sorting-container select, .sorting-container input {
+  background-color: white;
+  color: black;
+  width: 120px;
+  height: 30px;
+  border-radius: 8px;
+}
+.sorting-container label {
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.pagination-size * {
+  width: 180px;
+  margin-right: -10px;
+}
+.sorting-container p {
+  font-size: 16px;
+}
+
+.pagination {
+  margin-bottom: 100px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: 470px;
+}
+.pagination button {
+  background-color:azure;
+  color: black;
+}
+.pagination .active {
+  font-weight: 800;
+  font-size: 18px;
+}

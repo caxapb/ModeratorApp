@@ -1,0 +1,30 @@
+.sidebar {
+  position: fixed;
+  top: 80px;
+  left: 80px;
+  width: 200px;
+  
+}
+
+.sidebar input {
+  background-color: white;
+}
+.sidebar .text-input {
+  width: 130px;
+  margin: 5px;
+  margin-left: 0;
+  height: 30px;
+  border-radius: 8px;
+  background-color: white;
+  padding: 5px;
+}
+
+.sidebar button {
+  margin-top: 15px;
+  background-color: #00aaff;
+}
+
+.sidebar h3 {
+  margin: 15px;
+  margin-left: 0;
+}
