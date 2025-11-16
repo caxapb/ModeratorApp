@@ -31,6 +31,14 @@ export default function ModeratorPannel({ id }) {
   const [reason, setReason] = useState(reasonsReject[0]);
   const [comment, setComment] = useState('');
 
+  function handleApprove () {
+    if (!moderator.permissions.includes("approve_ads")) {
+      alert("У вас недостаточно прав");
+      return;
+    }
+    fetch(`http://localhost:3001/api/v1/ads/${id}/approve`, { method: 'POST' });
+  };
+
   useEffect(() => {
     const handleKey = (e) => {
       // проверка, откуда нажата клавиша: если из окна ввода, то игнорировать и просто печатать ее, не обрабатывать
@@ -57,14 +65,6 @@ export default function ModeratorPannel({ id }) {
   if (!moderator) {
     return <div>Доступ запрещен</div>;
   }
-
-  function handleApprove () {
-    if (!moderator.permissions.includes("approve_ads")) {
-      alert("У вас недостаточно прав");
-      return;
-    }
-    fetch(`http://localhost:3001/api/v1/ads/${id}/approve`, { method: 'POST' });
-  };
 
   const handleReject = async() => {
     if (!moderator.permissions.includes("reject_ads")) {
