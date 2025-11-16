@@ -23,7 +23,6 @@ export default function Stats() {
       .then(res => res.json())
       .then(data => {
         setStats(data);
-        console.log(data);
         return fetch(`http://localhost:3001/api/v1/stats/chart/decisions?period=${period}`);
       })
       .then(res => res.json())
